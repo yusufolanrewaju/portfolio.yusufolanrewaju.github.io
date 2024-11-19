@@ -1,0 +1,62 @@
+@media and screen (max-width: 700px){
+    .intro{
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six'
+        ;
+    }
+}
+
+.about {
+    background-color: red;
+    padding: 20px;
+    color: white;
+}
+
+.about:not(:nth-child(even)) {
+    background-color: blue;
+    padding: 25px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.intro {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    grid-template-areas: 
+    'one one'
+    'two three'
+    'four three'
+    'five five'
+    'six six'
+    ;
+}
+
+article:nth-child(1){
+    grid-area: one;
+}
+
+article:nth-child(2){
+    grid-area: two;
+}
+
+article:nth-child(3){
+    grid-area: three;
+}
+
+article:nth-child(4){
+    grid-area: four;
+}
+
+article:nth-child(5){
+    grid-area: five;
+}
+
+article:nth-child(6){
+    grid-area: six;
+}

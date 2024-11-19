@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;1,6..12,200&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Quattrocento+Sans:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,200;8..60,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.social a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+    background-color:  rgba(201, 195, 195, 0.717);
+    z-index: 2;
+}
+
+.header label {
+    cursor: default;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 60px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.832);
+    transform: translateY(calc(-100% - 60px));
+    transition: 0.1s;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Source Serif 4', serif;
+}
+
+.nav li {
+    list-style: none;
+    /* list-style-image: url(); */
+    padding: 5px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(244, 100, 100);
+    color: white;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:active {
+    scale: .9;
+}
+
+.nav .btn {
+    margin-top: 5px;
+}
+
+i.fa {
+    cursor: pointer;
+}
+
+.menu-bar {
+    width: 35px;
+    height: 35px;
+    background: rgb(240, 118, 118);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.menu-bar span {
+    position: absolute;
+    font-size: 30px;
+}
+
+.on{
+    display: none;
+}
+
+.menu-bar input {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.menu-bar input:checked ~ .on {
+    display: inline-block;
+}
+
+.menu-bar input:checked + .off {
+    display: none;
+}
+
+.menu-bar:has(input:checked) + .nav {
+    transform: translateY(0);
+}
+
+.first {
+    background: rgba(216, 199, 199, 0.535);
+    padding: 10px 40px 0;
+    /* display: grid; */
+}
+
+.first ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 15px 10px 0 0;
+}
+
+.intro > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+
+.first h1 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.intro {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 100%;
+    position: relative;
+}
+
+.first img {
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+}
+
+section {
+    padding: 40px 50px;
+    color: rgb(46, 46, 63);
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0 50px ;
+}
+
+hr {
+    width: 40px;
+    background-color: rgb(240, 118, 118);
+    height: 2px;
+    border: none;
+    border-radius: 50px;
+    margin: 20px 0;
+}
+
+.top hr {
+    width: 70px;
+    margin: 0;
+}
+
+.about {
+    display: grid;
+}
+
+.about article:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 30px;
+}
+
+.image {
+    background-color: rgb(240, 118, 118);
+    max-width: 95%;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    height: 420px;
+    position: relative;
+    margin: 0px auto;
+}
+
+.image .img img {
+    width: 100%;
+    height: 380px;
+    border-radius: 5px;
+    position: absolute;
+    inset: 20px -15px;
+}
+
+.services {
+    background: url('../../Resources/images/portfolio_images/bg.png');
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.service {
+    height: max-content;
+    width: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0px 4px rgb(211, 208, 208);
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    line-height: 1.5rem;
+}
+
+.service .icon img {
+    width: 50px;
+    height: 50px;
+    margin: 0px calc(50% - 25px);
+}
+
+.service i {
+    border: 2px solid rgb(78, 73, 73);
+    padding: 10px;
+    border-radius: 50%;
+    margin: 15px 20px;
+}
+
+.work-process i:hover {
+    color: rgb(245, 12, 51);
+    border-color: rgb(245, 12, 51);
+    transition: .5s;
+}
+
+.work-process {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: url('../../Resources/images/portfolio_images/web-developer-bg-min.jpg') rgba(72, 70, 70, 0.818);
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding: 100px 40px;
+    color: white;
+}
+
+.work-process i {
+    border: 5px solid rgb(255, 255, 255);
+    padding: 10px 12px;
+    border-radius: 50%;
+    margin: 15px 0;
+    font-size: x-large;
+}
+
+.experiences {
+    display: grid;
+    gap: 25px;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0px 4px rgb(211, 208, 208);
+}
+
+.period {
+    color: rgb(245, 12, 51);
+}
+
+.progress {
+    width: 100%;
+    height: 12px;
+    background-color: rgba(199, 194, 194, 0.248);
+    color: white;
+    font-size: 8px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.progress-bar {
+    padding: 2px 10px;
+    background-color: rgb(245, 12, 51);
+}
+
+.animator {
+    animation: changer 1s ease forwards;
+}
+
+@keyframes changer {
+    from {
+        width: 0;
+    }
+    to{
+        width: calc((var(--progress) / 100) * 100%);
+    }
+}
+
+.doings {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    background-image: url('../../Resources/images/portfolio_images/bg.png');
+    background-position: center;
+}
+
+.doing {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.doing:is(:nth-child(6),:nth-child(7),:nth-child(8),:nth-child(9)){
+    display: none;
+}
+
+.doing img {
+    width: 100%;
+    height: 100%;
+}
+
+.doing:hover {
+    transform: rotate(3deg);
+    cursor: pointer;
+}
+
+.reviews {
+    background-image: url('../../Resources/images/portfolio_images/bg.png');
+    background-position: center;
+    background-size: contain;
+    display: grid;
+    gap: 45px;
+}
+
+.review {
+    padding: 30px;
+    border-radius: 8px;    
+    box-shadow: 0 0px 4px rgb(211, 208, 208);
+    width: 90%;
+    background-color: white;
+    justify-self: center;
+    line-height: 1.5rem;
+}
+
+.reviews article.top {
+    margin: 0;
+}
+
+.review i {
+    color: rgb(245, 12, 51);
+}
+
+.review img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(245, 12, 51);
+    border-radius: 50%;
+}
+
+.review hr {
+    width: 25px;
+    margin-top: 30px;
+}
+
+.form {
+    display: grid;
+    gap: 10px;
+}
+
+.form .btn {
+    /* grid-column: span 2; */
+    width: max-content;
+    justify-self: center;
+}
+
+.form input, form textarea {
+    outline: none;
+    padding: 10px;
+    resize: none;
+    overflow-y: auto;
+    border: 1px solid rgb(245, 12, 51);
+}
+
+.form input:is(:active,:focus), form textarea:is(:active,:focus) {
+    border-color: green;
+}
+
+footer {
+    background-color: rgb(30, 30, 72);
+    color: white;
+    padding: 35px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    'two two two'
+    'one one three'
+    'four four four'
+    ;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    grid-area: one;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    grid-area: three;
+    justify-self: end;
+}
+
+footer img {
+    grid-area: two;
+    width: 60px;
+    height: 60px;
+    justify-self: center;
+}
+
+.copyright {
+    text-align: center;
+    grid-area: four;
+}
