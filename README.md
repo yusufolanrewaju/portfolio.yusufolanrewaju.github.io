@@ -38,4 +38,4 @@ Here are some of the projects I've worked on:
 ---
 
 ## 📞 Contact Me
-- **Email:** [yusufolarewaju68@gmail.com](mailto:yusufolarewaju68@gmail.com)
+- **Email:** [yusufolanrewaju68@gmail.com](mailto:yusufolanrewaju68@gmail.com)
