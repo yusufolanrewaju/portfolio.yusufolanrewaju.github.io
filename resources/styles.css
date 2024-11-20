@@ -567,7 +567,6 @@ footer {
         background: #88ceeaec;
         align-items: center;
         padding: 15px;
-        z-index: 90;
         transform: translateY(-150%);
         transition: transform .5s ease;
     }
