@@ -171,6 +171,10 @@ body {
     height: 50px;
 }
 
+.home-content .mobile-view {
+    display: none;
+}
+
 .home-content .btn-box::before {
     content: '';
     position: absolute;
@@ -513,6 +517,10 @@ footer {
 
 @media screen and (max-width: 750px) {
 
+    html {
+        scroll-padding-top: 120px;
+    }
+
     .header {
         background: #88ceeaec;
     }
@@ -588,6 +596,8 @@ footer {
 
     .home {
         height: max-content;
+        align-items: center;
+        text-align: center;
     }
 
     .profile {
@@ -606,6 +616,10 @@ footer {
     .home-content h1 {
         font-size: 25px;
     }
+
+    .home-content h1 span {
+        display: inline-block;
+    }
     
     .home-content h3 {
         font-size: 20px;
@@ -615,6 +629,11 @@ footer {
     
     .home-content p {
         font-size: 14px;
+        display: none;
+    }
+
+    .home-content .mobile-view {
+        display: block;
     }
     
     .home-content .btn-box {
