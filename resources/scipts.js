@@ -52,27 +52,27 @@ tasks.addEventListener('click', ()=> {
 main.addEventListener('click', ()=> {
     content.style.display = "none";
     navbar.classList.remove('display');
-    hamburger.classList.toggle('rotate');
-    hamburger.classList.toggle('rotate2');
+    hamburger.classList.remove('rotate');
+    hamburger.classList.add('rotate2');
 })
 
 skills.addEventListener('click', ()=> {
     content.style.display = "none";
     navbar.classList.remove('display');
-    hamburger.classList.toggle('rotate');
-    hamburger.classList.toggle('rotate2');
+    hamburger.classList.remove('rotate');
+    hamburger.classList.add('rotate2');
 })
 
 footer.addEventListener('click', ()=> {
     content.style.display = "none";
     navbar.classList.remove('display');
-    hamburger.classList.toggle('rotate');
-    hamburger.classList.toggle('rotate2');
+    hamburger.classList.remove('rotate');
+    hamburger.classList.add('rotate2');
 })
 
 other.addEventListener('click', ()=> {
     content.style.display = "none";
     navbar.classList.remove('display');
-    hamburger.classList.toggle('rotate');
-    hamburger.classList.toggle('rotate2');
+    hamburger.classList.remove('rotate');
+    hamburger.classList.add('rotate2');
 })
