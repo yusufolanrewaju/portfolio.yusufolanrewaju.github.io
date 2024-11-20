@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -68,7 +69,7 @@ body {
     color: #00abf0;
 }
 
-.hamburger {
+#hamburger {
     position: absolute;
     right: 15px;
     background: #2b475c;
@@ -325,7 +326,7 @@ body {
 
 .skills {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -462,6 +463,10 @@ body {
     scale: 1.15;
 }
 
+.content a:visited {
+    color: white;
+}
+
 .services-done:has(:hover,:active) .content {
     display: block;
 }
@@ -527,8 +532,30 @@ footer {
         background: #88ceeaec;
     }
 
-    .hamburger {
+    #hamburger {
         display: block;
+    }
+
+    
+    #hamburger .menu {
+        position: absolute;
+        background: white;
+        height: 100%;
+        width: 10px;
+        border: 1px solid white;
+        border-radius: 10px;
+        inset: 10px 7.5px;
+        overflow: hidden;
+    }
+    
+    .rotate {
+        transform: rotate(180deg);
+        transition: 0.5s ease;
+    }
+    
+    .rotate2 {
+        transform: rotate(0deg);
+        transition: 0.5s ease;
     }
 
     .navbar {
@@ -540,13 +567,14 @@ footer {
         background: #88ceeaec;
         align-items: center;
         padding: 15px;
-        transform: translateY(-500%);
-        transition: .5s;
         z-index: 90;
+        transform: translateY(-150%);
+        transition: transform .5s ease;
     }
-
-    .navbar.display {
+    
+    .display {
         transform: translateY(0);
+        transition: transform .5s ease;
     }
 
     .navbar li {
@@ -573,7 +601,7 @@ footer {
     }
 
     .home-content {
-        max-width: 70%;
+        max-width: 80%;
     }
     
     .home-content h1 {
@@ -592,14 +620,13 @@ footer {
     
     .home-content .btn-box {
         display: flex;
-        flex-direction: column;
         width: 100%;
-        height: 120px;
+        height: 45px;
         gap: 10px;
     }
     
     .btn-box a {
-        width: 50%;
+        width: 45%;
         height: 100%;
         border-radius: 8px;
         font-size: 13px;
