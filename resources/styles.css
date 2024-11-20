@@ -582,7 +582,7 @@ footer {
 
     .main {
         margin-top: 100px;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 35px;
     }
 
