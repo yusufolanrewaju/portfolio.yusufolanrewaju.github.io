@@ -40,6 +40,7 @@ const typed = new Typed('#multiple', {
 });
 
 hamburger.addEventListener('click', () => {
+    content.style.display = "none";
     navbar.classList.toggle('display');
     hamburger.classList.toggle('rotate');
     hamburger.classList.toggle('rotate2');
